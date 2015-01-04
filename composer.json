@@ -2,7 +2,9 @@
   "minimum-stability": "dev",
   "require": {
     "composer/installers": "dev-drupal-core",
-    "drupal/drupal-core": "8.0.0-beta4"
+    "drupal/drupal-core": "8.0.0-beta4",
+    "drupal/devel": "dev-8.x-1.x",
+    "drupal/config_devel": "dev-8.x-1.x"
   },
   "repositories": [
     {
@@ -64,12 +66,20 @@
           ]
         }
       }
+    },
+    {
+      "type": "vcs",
+      "url":  "http://git.drupal.org/project/devel.git"
+    },
+    {
+      "type": "vcs",
+      "url":  "http://git.drupal.org/project/config_devel.git"
     }
   ],
   "extra": {
     "installer-paths": {
       "core": ["type:drupal-core"],
-      "modules": ["type:drupal-module"],
+      "modules/contrib/{$name}": ["type:drupal-module"],
       "themes": ["type:drupal-theme"]
     }
   }
