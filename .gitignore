@@ -1,0 +1,6 @@
+core
+vendor
+
+sites/default/files
+sites/default/services.yml
+sites/default/settings.php
